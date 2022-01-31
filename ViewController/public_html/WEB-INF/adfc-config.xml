@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <metadata-resource id="__1">/WEB-INF/adfc-sale-config.xml</metadata-resource>
+  <metadata-resource id="__2">/WEB-INF/adfc-products-config.xml</metadata-resource>
+  <view id="shop">
+    <page>/shop.jsf</page>
+  </view>
+  <view id="preferences">
+    <page>/preferences.jsf</page>
+  </view>
+  <view id="home">
+    <page>/home.jsf</page>
+  </view>
+  <view id="help">
+    <page>/help.jsf</page>
+  </view>
+  <control-flow-rule id="__3">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>adfMenu_shop</from-outcome>
+      <to-activity-id>shop</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__5">
+      <from-outcome>adfMenu_preferences</from-outcome>
+      <to-activity-id>preferences</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome>adfMenu_home</from-outcome>
+      <to-activity-id>home</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome>adfMenu_help</from-outcome>
+      <to-activity-id>help</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__8">
+    <description>Menu Model Managed Bean</description>
+    <managed-bean-name>root_menu</managed-bean-name>
+    <managed-bean-class>oracle.adf.view.rich.model.MDSMenuModel</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property id="__9">
+      <property-name>createHiddenNodes</property-name>
+      <value>false</value>
+    </managed-property>
+    <managed-property id="__10">
+      <property-name>source</property-name>
+      <property-class>java.lang.String</property-class>
+      <value>/WEB-INF/root_menu.xml</value>
+    </managed-property>
+  </managed-bean>
+</adfc-config>

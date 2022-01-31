@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">products</property>
+      <property
+         name="page">/products.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>products&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">118.59766</property>
+      <property
+         name="x">437.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">new</property>
+      <property
+         name="page">/new.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>new&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">270.39648</property>
+      <property
+         name="x">438.5</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule4">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">51.0</property>
+      <property
+         name="x">40.0</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="WildcardControlFlowRule4"
+      to="View2">
+      <property
+         name="fromOutcome">adfMenu_products</property>
+      <property
+         name="sdm:polyPoints">R45,77.446976,47.5,396.0,118.24707,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="WildcardControlFlowRule4"
+      to="View3">
+      <property
+         name="fromOutcome">adfMenu_new</property>
+      <property
+         name="sdm:polyPoints">R55,76.0,54.5,397.5,270.0459,L50</property>
+   </ControlFlowCase>
+</SDM>

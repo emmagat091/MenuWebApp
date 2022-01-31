@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="sale">
+    <page>/sale.jsf</page>
+  </view>
+  <view id="electronics">
+    <page>/electronics.jsf</page>
+  </view>
+  <view id="media">
+    <page>/media.jsf</page>
+  </view>
+  <view id="oficce">
+    <page>/oficce.jsf</page>
+  </view>
+  <control-flow-rule id="__9">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>adfMenu_sale</from-outcome>
+      <to-activity-id>sale</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__11">
+      <from-outcome>adfMenu_electronics</from-outcome>
+      <to-activity-id>electronics</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome>adfMenu_oficce</from-outcome>
+      <to-activity-id>oficce</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__13">
+      <from-outcome>adfMenu_media</from-outcome>
+      <to-activity-id>media</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

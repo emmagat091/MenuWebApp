@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <groupNode id="itemNode_sale" label="Sale" idref="itemNode_electronics">
+    <itemNode id="itemNode_electronics" label="Electronics" action="adfMenu_electronics" focusViewId="/electronics"/>
+    <itemNode id="itemNode_oficce" label="Office" action="adfMenu_oficce" focusViewId="/oficce"/>
+    <itemNode id="itemNode_media" label="Media" action="adfMenu_media" focusViewId="/media"/>
+  </groupNode>
+</menu>

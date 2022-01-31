@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:cc="http://java.sun.com/jsf/composite">
+    <af:panelStretchLayout id="pt_psl1">
+        <f:facet name="bottom"/>
+        <f:facet name="center">
+            <af:decorativeBox id="pt_db1">
+                <f:facet name="center">
+                    <af:decorativeBox id="pt_db2">
+                        <f:facet name="center">
+                            <af:decorativeBox id="pt_db3">
+                                <f:facet name="center">
+                                    <af:panelSplitter id="pt_ps1">
+                                        <f:facet name="first">
+                                            <af:navigationPane id="pt_np4" hint="list" level="3" value="#{root_menu}"
+                                                               var="menuInfo">
+                                                <f:facet name="nodeStamp">
+                                                    <af:commandNavigationItem text="#{menuInfo.label}"
+                                                                              id="pt_cni5"
+                                                                              destination="#{menuInfo.destination}"
+                                                                              action="#{menuInfo.doAction}"/>
+                                                </f:facet>
+                                            </af:navigationPane>
+                                        </f:facet>
+                                        <f:facet name="second">
+                                            <cc:insertFacet name="body"/>
+                                        </f:facet>
+                                    </af:panelSplitter>
+                                </f:facet>
+                                <f:facet name="top">
+                                    <af:breadCrumbs id="pt_bc1" value="#{root_menu}" var="menuInfo">
+                                        <f:facet name="nodeStamp">
+                                            <af:commandNavigationItem text="#{menuInfo.label}" id="pt_cni4"
+                                                                      destination="#{menuInfo.destination}"
+                                                                      action="#{menuInfo.doAction}"/>
+                                        </f:facet>
+                                    </af:breadCrumbs>
+                                </f:facet>
+                            </af:decorativeBox>
+                        </f:facet>
+                        <f:facet name="top">
+                            <af:navigationPane id="pt_np3" hint="tabs" level="2" value="#{root_menu}" var="menuInfo">
+                                <f:facet name="nodeStamp">
+                                    <af:commandNavigationItem text="#{menuInfo.label}" id="pt_cni3"
+                                                              destination="#{menuInfo.destination}"
+                                                              action="#{menuInfo.doAction}"/>
+                                </f:facet>
+                            </af:navigationPane>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
+                <f:facet name="top">
+                    <af:navigationPane id="pt_np2" hint="tabs" level="1" value="#{root_menu}" var="menuInfo">
+                        <f:facet name="nodeStamp">
+                            <af:commandNavigationItem text="#{menuInfo.label}" id="pt_cni2"
+                                                      destination="#{menuInfo.destination}"
+                                                      action="#{menuInfo.doAction}"/>
+                        </f:facet>
+                    </af:navigationPane>
+                </f:facet>
+            </af:decorativeBox>
+        </f:facet>
+        <f:facet name="start"/>
+        <f:facet name="end"/>
+        <f:facet name="top">
+            <af:panelHeader text="ADF Menu Example" id="pt_ph1">
+                <f:facet name="context"/>
+                <f:facet name="menuBar">
+                    <af:navigationPane id="pt_np1" hint="buttons" level="0" var="menuInfo" value="#{root_menu}">
+                        <f:facet name="nodeStamp">
+                            <af:commandNavigationItem text="#{menuInfo.label}" id="pt_cni1"
+                                                      destination="#{menuInfo.destination}"
+                                                      action="#{menuInfo.doAction}"/>
+                        </f:facet>
+                    </af:navigationPane>
+                </f:facet>
+                <f:facet name="toolbar"/>
+                <f:facet name="legend"/>
+                <f:facet name="info"/>
+            </af:panelHeader>
+        </f:facet>
+    </af:panelStretchLayout>
+    <af:xmlContent>
+        <afc:component>
+            <afc:display-name>myTemplate</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>body</afc:facet-name>
+            </afc:facet>
+        </afc:component>
+    </af:xmlContent>
+</af:pageTemplateDef>
