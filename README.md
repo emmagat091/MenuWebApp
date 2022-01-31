@@ -25,3 +25,6 @@ Aprendimos a:
 3) Usar las funciones del controlador ADF junto con el modelo de menú XML para crear diferentes niveles de menús.
 4) Enlace los componentes Panel de navegación y Bread Crumbs al modelo de menú ADF.
 5) Utilizar WebLogic Server integrado para ejecutar una aplicación web Fusion.
+
+
+**Fuente proyecto:** https://docs.oracle.com/cd/E18941_01/tutorials/jdtut_11r2_43/jdtut_11r2_43.html
